@@ -15,11 +15,10 @@ Risky Business Day Decomposition plan:
 Here are some formatting examples:
 # Level 1 
 ## Level 2
-### Lvel 3
+### Level 3
 
 * Bullet point, level 1  
   * Level 2 (tab once)
     * Level 3
 
- 
- *Italics*
+
