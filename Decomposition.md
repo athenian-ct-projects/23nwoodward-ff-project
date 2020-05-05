@@ -17,6 +17,7 @@ Here are some formatting examples:
 ## Level 2
 ### Level 3
 
+
 * Bullet point, level 1  
   * Level 2 (tab once)
     * Level 3
