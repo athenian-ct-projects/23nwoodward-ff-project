@@ -1,4 +1,3 @@
-
 # This game is for Risky Buisness Day by NW '23
 # Make sure to get enough money to stay in business, but enough sugar to keep up your energy throughout the day!
 money = 0 
@@ -35,7 +34,14 @@ if input0 == 1:
         inputi = int(input("You bought yourself a nice chocolate chip cookie for $" + str(cost*1.2) + "press 1 to continue"))
         if inputi == 1:
             input12 = int(input("time to pay taxes!!! You have to pay " + str(cost*2) + ". Your total money is now $" + str(money) + ". Would you like to (1) save or (2) spend. "))
-
+            if input12 == 1:
+                money = money + cost*2
+                input121 = int(input("you sold 2 more items/experiences. Your total money is now $"+ str(money)+ ". Pick to either (1) spend or (2) sell. "))
+                if input121 == 1:
+                    print("Ted has specially selected you to become a tax collecter. You no longer get to sell. Game Over")
+                if input121 == 2: 
+                    print("Oh no bad weather, you have to end the focus day here. GAME OVER Your total money was"+ str(money))
+            if input12 == 2: 
         
 elif input0 == 2: 
     input2 = int(input("The buisness next door has ice cream sundaes. Pick to either (1) hold off or (2) buy one. "))
@@ -54,7 +60,8 @@ elif input0 == 2:
         if input22 == 1:
             print("hi")
         if input22 == 2: 
-            print("YOu have no more money. GAME OVER.")
+            print("You have no more money. GAME OVER.")
+
 
 
 
