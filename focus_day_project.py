@@ -1,12 +1,12 @@
 # This game is for Risky Buisness Day by NW '23
 # Make sure to get enough money to stay in business, but enough sugar to keep up your energy throughout the day!
 money = 0 
-x = 0
+def sales(): 
+    for x in range(4):
+        print(x) 
 #this is a counter for the total amount of money. 
 cost = float(input("How much are you selling your item/experience for today?"))
 money = money + cost*3
-while x < 2:
-    continue
 if cost > 0: 
     print("great, let's get started! You start with $" + str(money) + ".")
 input0 = int(input("Do you want to (1) help start setting up the business, or (2) scope out other businesses? pick 1 or 2. "))
@@ -60,29 +60,33 @@ elif input0 == 2:
             print("You now have to pay taxes! You have to pay $" + str(cost*2) + ". After paying you have $" + str(money) + " Game Over")
     if input2 == 2: 
         money = money - cost*1.5 - cost
-        print("You bought a ice cream sandwich for $" + str(cost*1.5) + "You now have to pay taxes of $" + str(cost))
-        input22 = int(input("Your total amount of money is now $" + str(money) + ". Would you like to (1) save or (2) spend"))
+        print("You bought a ice cream sandwich for $" + str(cost*1.5) + ". You had to pay taxes of $" + str(cost))
+        input22 = int(input("Your total amount of money left is now $" + str(money) + ". Would you like to (1) save or (2) spend"))
         if input22 == 1:
             money = money + cost
-            input221 = int(input("You sold another item/experience. You now have " + str(money)+ "It has started to rain. Do you want to risk it and (1) keep selling or play it safe and (2) go inside."))
+            input221 = int(input("You sold another item/experience. You now have $" + str(money)+ ". It has started to rain. Do you want to risk it and (1) keep selling or play it safe and (2) go inside."))
             if input221 == 1: 
                 money = money + cost*3 
+                sales()
                 input2211 = int(input("The rain subsided and you made three more sales. Do you want to (1) keep the money you have now and finish the game or (2) keep selling on the risk the rain could come back. "))
                 if input2211 == 1:
                     print("Congratulations you finished the game. You end with $" + str(money) + ".")
                 if input2211 == 2: 
                     import random
-                    num = random.randint(1,2)
-                    if num == 1:
-                        money = money - cost*4
-                        print("You got caught in the rainstorm and everything you had for sale was struck by lightening. You lost a bunch of money and ended with $" + str(money))
-                    if num == 2:
-                        money = money + cost*3
-                        print("Yay, you finished just before the rainstorm and earned $" + str(cost*3) + ". You ended the game with $" + str(money))
-            if input221 == 2:
+                    num = random.randint(1,3)
+                    x = 0 
+                    while x < 2: 
+                        x=x+1
+                        guess = int(input("Guess a number either 1 or 2. If you get it right, you succeed, if not, you fail. "))
+                        if guess == num:
+                            money = money + cost*3
+                            print("Yay, you finished just before the rainstorm and earned $" + str(cost*3) + ". You ended the game with $" + str(money))
+                            break
+                        if guess != num: 
+                            money = money - cost*4
+                            print("You got caught in the rainstorm and everything you had for sale was struck by lightening. You lost a bunch of money and ended with $" + str(money))
+                            break
+            if input221 == 2:           
                 print("The rain subsided but you were stuck inside and couldn't make anymore sales. Your finishing money total is $" + str(money))
         if input22 == 2: 
             print("You have no more money. GAME OVER.")
-
-
-
