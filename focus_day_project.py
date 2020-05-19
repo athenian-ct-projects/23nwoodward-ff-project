@@ -24,6 +24,10 @@ if input0 == 1:
             if input111 == 2: 
                 money = money - cost*0.8
                 input1112 = int(input("You can now pick between (1) an ice cream sundae or (2) a root beer float both for $" + str(cost*0.8)))
+                if input1112 == 1:
+                    print("oh no, while you went to get ice cream, your partners sold out. YOu no longer have a source of income. GAME OVER.")
+                if input1112 == 2: 
+                    print("You completed risky buisness day!!! You finished with $" + str(money))
         elif input11 == 2: 
             input112 = int(input("You have to pay $" + str(cost*1.5) + " for either a (1) brownie or (2) milkshake. "))
             if input112 >=1:
@@ -42,26 +46,43 @@ if input0 == 1:
                 if input121 == 2: 
                     print("Oh no bad weather, you have to end the focus day here. GAME OVER Your total money was"+ str(money))
             if input12 == 2: 
+                print("You payed $" + str(cost*2) + " for an orange soda and now you've run out of money. GAME OVER")
         
 elif input0 == 2: 
     input2 = int(input("The buisness next door has ice cream sundaes. Pick to either (1) hold off or (2) buy one. "))
     if input2 == 1:
         money = money - cost*2
-        input21 = int(input("You now have to pay $" + str(cost*2) + " for a (1) glass of lemonade  or (2) cupcake."))
+        input21 = int(input("You now have to pay $" + str(cost*2) + " for a (1) glass of lemonade  or (2) a cupcake."))
         if input21 == 1:
             print("Oh no! Your friends couldn't manage the business while you were gone and you went bankrupt! GAME OVER")
         if input21 == 2: 
             money = money -cost*2
             print("You now have to pay taxes! You have to pay $" + str(cost*2) + ". After paying you have $" + str(money) + " Game Over")
-    elif input2 == 2: 
+    if input2 == 2: 
         money = money - cost*1.5 - cost
         print("You bought a ice cream sandwich for $" + str(cost*1.5) + "You now have to pay taxes of $" + str(cost))
-        input22 = int(input("Your total amount of money is now $" + str(money) + ". WOuld you like to (1) save or (2) spend"))
+        input22 = int(input("Your total amount of money is now $" + str(money) + ". Would you like to (1) save or (2) spend"))
         if input22 == 1:
-            print("hi")
+            money = money + cost
+            input221 = int(input("You sold another item/experience. You now have " + str(money)+ "It has started to rain. Do you want to risk it and (1) keep selling or play it safe and (2) go inside."))
+            if input221 == 1: 
+                money = money + cost*3 
+                input2211 = int(input("The rain subsided and you made three more sales. Do you want to (1) keep the money you have now and finish the game or (2) keep selling on the risk the rain could come back. "))
+                if input2211 == 1:
+                    print("Congratulations you finished the game. You end with $" + str(money) + ".")
+                if input2211 == 2: 
+                    import random
+                    num = random.randint(1,2)
+                    if num == 1:
+                        money = money - cost*4
+                        print("You got caught in the rainstorm and everything you had for sale was struck by lightening. You lost a bunch of money and ended with $" + str(money))
+                    if num == 2:
+                        money = money + cost*3
+                        print("Yay, you finished just before the rainstorm and earned $" + str(cost*3) + ". You ended the game with $" + str(money))
+            if input221 == 2:
+                print("The rain subsided but you were stuck inside and couldn't make anymore sales. YOur finishing money total is $" + str(money))
         if input22 == 2: 
             print("You have no more money. GAME OVER.")
-
 
 
 
