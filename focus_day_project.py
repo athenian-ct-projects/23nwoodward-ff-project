@@ -80,7 +80,7 @@ elif input0 == 2:
                         money = money + cost*3
                         print("Yay, you finished just before the rainstorm and earned $" + str(cost*3) + ". You ended the game with $" + str(money))
             if input221 == 2:
-                print("The rain subsided but you were stuck inside and couldn't make anymore sales. YOur finishing money total is $" + str(money))
+                print("The rain subsided but you were stuck inside and couldn't make anymore sales. Your finishing money total is $" + str(money))
         if input22 == 2: 
             print("You have no more money. GAME OVER.")
 
