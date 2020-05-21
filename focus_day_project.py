@@ -11,10 +11,10 @@ money = money + cost*3
 #these are my two main variables for the game
 if cost > 0: 
     print("great, let's get started! You start with $" + str(money) + ".")
-    #the amount of moeny someone starts with, earns, or loses is all based on the cost of their item/experience
+    #the amount of money someone starts with, earns, or loses is all based on the original cost input 
 input0 = int(input("Do you want to (1) help start setting up the business, or (2) scope out other businesses? pick 1 or 2. "))
 if input0 == 1: 
-    #all the inputs are labeled witht he numbers of previous descisions made
+    #all the inputs are labeled with the numbers of previous descisions made
     money = money + cost 
     input1 = int(input("Congrats, you've made $" + str(cost) + ". Your total money is $" + str(money) + " Pick to either (1) save or (2) spend."))
     if input1 == 1:
@@ -22,7 +22,7 @@ if input0 == 1:
         input11 = int(input("You sold two more, you now have $" + str(money) + ". Pick either (1) save or (2) spend. "))
         if input11 == 1:
             money = money + cost
-            input111 = int(input("you made another $" + str(cost) + "dollars. You now have $" + str(money) + "pick either (1) save or (2) spend. "))
+            input111 = int(input("you made another $" + str(cost) + " dollars. You now have $" + str(money) + ". pick either (1) save or (2) spend. "))
             if input111 == 1:
                 #first possible game ending (print statements signal finish possibilities)
                 print("GAME OVER! you don't have enough sugar to continue. You ended with $" + str(money))
@@ -74,7 +74,7 @@ elif input0 == 2:
     if input2 == 2: 
         money = money - cost*1.5 - cost
         #tenth possible game ending 
-        print("You bought a ice cream sandwich for $" + str(cost*1.5) + ". You had to pay taxes of $" + str(cost))
+        print("You bought an ice cream sundae for $" + str(cost*1.5) + ". You had to pay taxes of $" + str(cost))
         input22 = int(input("Your total amount of money left is now $" + str(money) + ". Would you like to (1) save or (2) spend"))
         if input22 == 1:
             money = money + cost
@@ -91,6 +91,7 @@ elif input0 == 2:
                     import random
                     num = random.randint(1,3)
                     x = 0 
+                    #these are my 3rd and fourth variables. 
                     while x < 2: 
                         x=x+1
                         guess = int(input("Guess a number either 1 or 2. If you get it right, you succeed, if not, you fail. "))
@@ -111,6 +112,10 @@ elif input0 == 2:
         if input22 == 2: 
             #15th possible game ending 
             print("You have no more money. GAME OVER.")
+
+
+
+
 
 
 
