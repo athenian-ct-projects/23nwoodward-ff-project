@@ -40,7 +40,7 @@ if input0 == 1:
             if input112 >=1:
                 money = money - cost*1.5 - cost*2.5 
                 #fourth possible game ending
-                print(" Sorry, you have to pay taxes now! :( You have to pay $" + str(cost*2.5) + " for taxes. now your total amount of money is now $" +str(cost) + ".")
+                print(" While trying to put out a new disply, you tripped over your table and everything feel on the ground; your buisness was ruined but your total ending amount of money was $" +str(cost) + ".")
     elif input1 == 2: 
         money = money - cost*1.2
         inputi = int(input("You bought yourself a nice chocolate chip cookie for $" + str(cost*1.2) + "press 1 to continue"))
