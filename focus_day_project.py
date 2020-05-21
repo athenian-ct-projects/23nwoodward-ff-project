@@ -1,11 +1,13 @@
+
 # This game is for Risky Buisness Day by NW '23
 # Make sure to get enough money to stay in business, but enough sugar to keep up your energy throughout the day!
 money = 0 
-#this is a counter for the total amount of money
-def sales(): 
-    for x in range(4):
-        print(x) 
-#this is my for loop and function  
+# this is a counter for the total amount of money
+y = 0
+def sales3(): 
+    for y in range(4):
+        print(y) 
+#this is my for loop and functions  
 cost = float(input("How much are you selling your item/experience for today?"))
 money = money + cost*3
 #these are my two main variables for the game
@@ -81,7 +83,7 @@ elif input0 == 2:
             input221 = int(input("You sold another item/experience. You now have $" + str(money)+ ". It has started to rain. Do you want to risk it and (1) keep selling or play it safe and (2) go inside."))
             if input221 == 1: 
                 money = money + cost*3 
-                sales()
+                sales3()
                 # this is where i call my function, listing the amount of sales made
                 input2211 = int(input("The rain subsided and you made three more sales. Do you want to (1) keep the money you have now and finish the game or (2) keep selling on the risk the rain could come back. "))
                 if input2211 == 1:
@@ -97,6 +99,8 @@ elif input0 == 2:
                         guess = int(input("Guess a number either 1 or 2. If you get it right, you succeed, if not, you fail. "))
                         if guess == num:
                             money = money + cost*3
+                            sales3()
+                            #calling the triple sales function
                             #12th possible game ending
                             print("Yay, you finished just before the rainstorm and earned $" + str(cost*3) + ". You ended the game with $" + str(money))
                             break
@@ -112,10 +116,6 @@ elif input0 == 2:
         if input22 == 2: 
             #15th possible game ending 
             print("You have no more money. GAME OVER.")
-
-
-
-
 
 
 
